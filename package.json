@@ -2,15 +2,15 @@
   "name": "shadow-signal",
   "version": "1.0.0",
   "description": "Realtime Multiplayer Social Deduction Game",
-  "scripts": {
-    "dev": "concurrently \"npm run dev:next\" \"npm run dev:server\"",
-    "dev:next": "next dev",
-    "dev:server": "node server.js",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "server": "node server.js"
-  },
+  
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint"
+    },
+  
+  
   "dependencies": {
     "next": "^14.0.0",
     "react": "^18.2.0",
