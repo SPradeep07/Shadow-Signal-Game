@@ -27,7 +27,12 @@ export default function GameRoom({ room, playerName }: GameRoomProps) {
       setTimeLeft(remaining);
 
       const interval = setInterval(() => {
-        const newElapsed = Math.floor((Date.now() - room.speakingStartTime) / 1000);
+        if (!room.speakingStartTime) return;
+
+        const newElapsed = Math.floor(
+          (Date.now() - room.speakingStartTime) / 1000
+        );
+        
         const newRemaining = Math.max(0, 30 - newElapsed);
         setTimeLeft(newRemaining);
         
